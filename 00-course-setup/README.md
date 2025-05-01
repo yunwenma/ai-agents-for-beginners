@@ -37,7 +37,7 @@ Then select `Generate new token`.
 
 Copy your new token that you have just created. You will now add this to your `.env` file included in this course. 
 
-## Add this to your Environment Variables
+## Setting Up Your `.env` File for Azure AI Foundry
 
 To create your `.env` file run the following command in your terminal:
 
@@ -45,22 +45,35 @@ To create your `.env` file run the following command in your terminal:
 cp .env.example .env
 ```
 
-This will copy the example file and create a `.env` in your directory, fill in the values for the environment variables. You can locate the values for each environment variable in the following locations of the [Azure AI Foundry](https://ai.azure.com?WT.mc_id=academic-105485-koreyst) portal:
+This will copy the example file and create a `.env` in your directory, fill in the values for the environment variables.
 
-Open that file and paste the token you created into the `GITHUB_TOKEN=` field of the .env file. 
-- `AZURE_SUBSCRIPTION_ID` - On the **Overview** page of your project within **Project details**.
-- `AZURE_AI_PROJECT_NAME` - At the top of the **Overview** page for your project.
-- `AZURE_OPENAI_RESOURCE_GROUP` - On the **Overview** page of the **Management Center** within **Project properties**.
-- `AZURE_OPENAI_SERVICE` - On the **Overview** page of your project in the **Included capabilities** tab for **Azure OpenAI Service**.
-- `AZURE_OPENAI_API_VERSION` - On the [API version lifecycle](https://learn.microsoft.com/azure/ai-services/openai/api-version-deprecation#latest-ga-api-release?WT.mc_id=academic-105485-koreyst) webpage within the **Latest GA API release** section.
-- `AZURE_OPENAI_ENDPOINT` - On the **Details** tab of your model deployment within **Endpoint** (i.e. **Target URI**)
-- `GLOBAL_LLM_SERVICE` - On the **Overview** page of your project within **Project details**.
-- `AZURE_OPENAI_API_KEY` - On the **Overview** page of your project within **Project details**.
-- `AZURE_OPENAI_EMBEDDING_DEPLOYMENT_NAME` - On the **Overview** page of your project within **Project details**.
-- `AZURE_OPENAI_CHAT_DEPLOYMENT_NAME` - On the **Overview** page of your project within **Project details**.
-- `PROJECT_CONNECTION_STRING` - On the **Overview** page of your project within **Project details**.
-- `AZURE_SEARCH_SERVICE_ENDPOINT` - On the **Overview** page of your project within **Project details**.
-- `AZURE_SEARCH_API_KEY` - On the **Overview** page of your project within **Project details**.
+Here's where you can find each value in Azure AI Foundry, the portal, or other relevant locations.
+
+### GitHub
+- `GITHUB_TOKEN` - Create a personal access token in GitHub, then paste it into the `GITHUB_TOKEN=` field in your `.env` file.
+
+### Overview Page (Project)
+- `AZURE_SUBSCRIPTION_ID` - Check **Project details** on the **Overview** page of your project.
+- `AZURE_AI_PROJECT_NAME` - Look at the top of the **Overview** page for your project.
+- `AZURE_OPENAI_SERVICE` - Find this in the **Included capabilities** tab for **Azure OpenAI Service** on the **Overview** page.
+- `PROJECT_CONNECTION_STRING` - On the **Overview** page, go to **Project details** connection and copy the **Project connection string**.
+
+### Management Center
+- `AZURE_OPENAI_RESOURCE_GROUP` - Go to **Project properties** on the **Overview** page of the **Management Center**.
+- `GLOBAL_LLM_SERVICE` - Under **Connected resources**, find the **Azure AI Services** connection name. If not listed, check the **Azure portal** under your resource group for the AI Services resource name.
+- `AZURE_SEARCH_SERVICE_ENDPOINT` - Under **Connected resources**, find the **Azure AI Search** connection and copy the **Endpoint** URL. You can also check the **Azure portal** under your **Azure AI Search** resource's **Overview**.
+
+### Models + Endpoints Page
+- `AZURE_OPENAI_EMBEDDING_DEPLOYMENT_NAME` - Select your embedding model (e.g., `text-embedding-ada-002`) and note the **Deployment name** from the model details.
+- `AZURE_OPENAI_CHAT_DEPLOYMENT_NAME` - Select your chat model (e.g., `gpt-4o-mini`) and note the **Deployment name** from the model details.
+
+### Azure Portal
+- `AZURE_OPENAI_ENDPOINT` - Look for **Azure AI services**, click on it, then go to **Resource Management**, **Keys and Endpoint**, scroll down to the "Azure OpenAI endpoints", and copy the one that says "Language APIs".
+- `AZURE_OPENAI_API_KEY` - From the same screen, copy KEY 1 or KEY 2. 
+- `AZURE_SEARCH_API_KEY` - Go to your **Azure AI Search** resource, then go to **Settings** and then **Keys** to copy the primary or secondary admin key.
+
+### External Webpage
+- `AZURE_OPENAI_API_VERSION` - Visit the [API version lifecycle](https://learn.microsoft.com/en-us/azure/ai-services/openai/api-version-deprecation#latest-ga-api-release) page under **Latest GA API release**.
 
 ## Install Required Packages
 
