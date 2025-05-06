@@ -56,7 +56,7 @@ Here's where you can find each value in Azure AI Foundry, the portal, or other r
 - `AZURE_SUBSCRIPTION_ID` - Check **Project details** on the **Overview** page of your project.
 - `AZURE_AI_PROJECT_NAME` - Look at the top of the **Overview** page for your project.
 - `AZURE_OPENAI_SERVICE` - Find this in the **Included capabilities** tab for **Azure OpenAI Service** on the **Overview** page.
-- `PROJECT_CONNECTION_STRING` - On the **Overview** page, go to **Project details** connection and copy the **Project connection string**.
+- `PROJECT_CONNECTION_STRING` - On the **Overview** page, go to **Project details** connection and copy the **Project connection string**. Please assert that the string starts with **https://** and has four parts separated with **;** (semicolon). Currently in Azure AI Foundry the string is missing the leading **https://**  
 
 ### Management Center
 - `AZURE_OPENAI_RESOURCE_GROUP` - Go to **Project properties** on the **Overview** page of the **Management Center**.
