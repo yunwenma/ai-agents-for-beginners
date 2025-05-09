@@ -12,8 +12,7 @@ mcp[cli]
 mistralai~=0.4.2
 openai
 pillow==11.0.0
-pydantic
 python-dotenv~=1.0.1
-semantic-kernel>=1.27.2
-semantic-kernel[azure]>=1.27.2
-semantic-kernel[mcp]>=1.27.2
+semantic-kernel>=1.29.0
+semantic-kernel[azure]
+semantic-kernel[mcp]
