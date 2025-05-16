@@ -64,6 +64,7 @@ For more information on running the code for this course, go to the [Course Setu
 Do you have suggestions or found spelling or code errors? [Raise an issue](https://github.com/microsoft/ai-agents-for-beginners/issues?WT.mc_id=academic-105485-koreyst) or [Create a pull request](https://github.com/microsoft/ai-agents-for-beginners/pulls?WT.mc_id=academic-105485-koreyst)
 
 If you get stuck or have any questions about building AI Agents, join our [Azure AI Foundry Community Discord](https://discord.gg/kzRShWzttr) 
+
 If you have product feedback or errors whilst building visit our [Azure AI Foundry Developer Forum](https://aka.ms/azureaifoundry/forum)
 
 ## 📂 Each lesson includes
