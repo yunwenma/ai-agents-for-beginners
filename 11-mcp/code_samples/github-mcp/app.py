@@ -386,7 +386,6 @@ async def on_chat_end():
             print(f"Error closing GitHub plugin: {str(e)}")
 
 
-import re
 def route_user_input(user_input: str):
     """
     Analyze user input and return a list of agent names to invoke.
@@ -422,7 +421,7 @@ async def on_message(message: cl.Message):
     chat_history.add_user_message(message.content)
 
     # If more than one agent is selected, use group chat
-    if len(agent_names) > 1 or agent_names == ["GithubAgent", "HackathonAgent", "EventsAgent"]:
+    if len(agent_names) > 1:
         await agent_group_chat.add_chat_message(message.content)
         answer = cl.Message(content="Processing your request using: {}...\n\n".format(", ".join(agent_names)))
         await answer.send()
