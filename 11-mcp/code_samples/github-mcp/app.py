@@ -1,8 +1,9 @@
 import os
 import json
+import logging
 from dotenv import load_dotenv
 import requests
-
+import re
 
 import chainlit as cl
 from mcp import ClientSession
@@ -31,6 +32,13 @@ from azure.search.documents.indexes.models import SearchIndex, SimpleField, Sear
 
 # Load environment variables
 load_dotenv()
+
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
 
 
 # Example Weather Plugin (Tool)
@@ -230,32 +238,32 @@ async def on_chat_start():
 
     # Add GitHub MCP plugin
     try:
-        print("Initializing GitHub MCP plugin...")
+        logger.info("Initializing GitHub MCP plugin...")
         github_plugin = MCPStdioPlugin(
-            name="Github",
-            description="Github Plugin",
+            name="GitHub", 
+            description="GitHub Plugin", 
             command="npx",
             args=["-y", "@modelcontextprotocol/server-github"]
         )
 
         # Connect to the GitHub MCP server
         await github_plugin.connect()
-        print("GitHub MCP server connection established")
+        logger.info("GitHub MCP server connection established")
 
         # Add the plugin to the kernel
         kernel.add_plugin(github_plugin)
-        print("GitHub plugin added to kernel")
+        logger.info("GitHub plugin added to kernel")
 
         # Store the plugin in user session for cleanup later
         cl.user_session.set("github_plugin", github_plugin)
 
-        print("GitHub plugin setup completed successfully")
-        print("✓ MCP Connection Status: Active")
-        print("✓ Plugin Status: Loaded")
-        print("✓ Tools: Available")
+        logger.info("GitHub plugin setup completed successfully")
+        logger.info("✓ MCP Connection Status: Active")
+        logger.info("✓ Plugin Status: Loaded")
+        logger.info("✓ Tools: Available")
     except Exception as e:
-        print(f"❌ Error adding GitHub plugin: {str(e)}")
-        print("Try following the setup guide in MCP_SETUP.md")
+        logger.error(f"❌ Error adding GitHub plugin: {str(e)}")
+        logger.error("Try following the setup guide in MCP_SETUP.md")
 
     GITHUB_INSTRUCTIONS = """
 You are an expert on GitHub repositories. When answering questions, you **must** use the provided GitHub username to find specific information about that user's repositories, including:
@@ -385,23 +393,22 @@ async def on_chat_end():
         except Exception as e:
             print(f"Error closing GitHub plugin: {str(e)}")
 
-
 def route_user_input(user_input: str):
     """
     Analyze user input and return a list of agent names to invoke.
-    Returns: list of agent names (e.g., ["GithubAgent", "HackathonAgent", "EventsAgent"])
+    Returns: list of agent names (e.g., ["GitHubAgent", "HackathonAgent", "EventsAgent"])
     """
     user_input_lower = user_input.lower()
     agents = []
     # Example patterns (expand as needed)
     if re.search(r"github|repo|repository|commit|pull request", user_input_lower):
-        agents.append("GithubAgent")
+        agents.append("GitHubAgent")
     if re.search(r"hackathon|project idea|competition|challenge|win", user_input_lower):
         agents.append("HackathonAgent")
     if re.search(r"event|conference|meetup|workshop|webinar", user_input_lower):
         agents.append("EventsAgent")
     if not agents:
-        agents = ["GithubAgent", "HackathonAgent", "EventsAgent"]
+        agents = ["GitHubAgent", "HackathonAgent", "EventsAgent"]
     return agents
 
 
@@ -462,7 +469,7 @@ async def on_message(message: cl.Message):
                 if isinstance(msg, FunctionResultContent):
                     await answer.stream_token(f"Function result: {msg.content}\n\n")
             chat_history.add_assistant_message(answer.content)
-            await answer.send()
+            await answer.update()
         except Exception as e:
             await answer.stream_token(f"\n\n❌ Error: {str(e)}\n\n")
             chat_history.add_assistant_message(f"Error: {str(e)}")

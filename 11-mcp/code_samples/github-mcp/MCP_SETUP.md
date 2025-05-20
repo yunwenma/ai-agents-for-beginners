@@ -49,8 +49,8 @@
 ## Connection Verification
 
 Your MCP server is properly connected when:
-1. Console shows "GitHub plugin added successfully"
-2. Chainlit interface shows (1) next to plug icon
+1. Console shows "GitHub plugin setup completed successfully"
+2. Connection logs show "✓ MCP Connection Status: Active"
 3. GitHub commands work in chat interface
 
 ## Environment Variables
