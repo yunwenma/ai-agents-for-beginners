@@ -113,6 +113,7 @@ Common issues and solutions:
 - Add more event sources
 
 ## Resources
+- [MCP for Beginners](https://aka.ms/mcp-for-beginners)  
 - [MCP Documentation](https://github.com/microsoft/semantic-kernel/tree/main/python/semantic-kernel/semantic_kernel/connectors/mcp)
 - [Azure Cognitive Search Docs](https://learn.microsoft.com/azure/search/)
 - [Semantic Kernel Guides](https://learn.microsoft.com/semantic-kernel/)
