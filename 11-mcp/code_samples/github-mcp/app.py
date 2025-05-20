@@ -116,7 +116,7 @@ try:
     with open(event_descriptions_path, "r", encoding='utf-8') as f:
         markdown_content = f.read()
 except FileNotFoundError:
-    print(f"Warning: Could not find {event_descriptions_path}")
+    logger.warning(f"Could not find {event_descriptions_path}")
     markdown_content = ""
 
 # Split the markdown content into individual event descriptions
@@ -148,7 +148,7 @@ def flatten(xss):
 
 @cl.on_mcp_connect
 async def on_mcp(connection, session: ClientSession):
-    print(f"MCP Connection established: {connection.name}")
+    logger.info(f"MCP Connection established: {connection.name}")
     result = await session.list_tools()
     tools = [{
         "name": t.name,
