@@ -21,7 +21,7 @@
 3. **Verify Connection**
    - Look for the plug icon (🔌) in your Chainlit interface
    - A number (1) should appear next to the plug icon indicating successful connection
-   - The console should show: "GitHub plugin added successfully"
+   - The console should show: "GitHub plugin setup completed successfully" (along with additional status lines)
 
 ## Troubleshooting
 
