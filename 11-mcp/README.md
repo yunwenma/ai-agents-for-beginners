@@ -1,5 +1,18 @@
 # Lesson 11: Model Context Protocol (MCP) Integration
 
+## Introduction to Model Context Protocol (MCP)
+
+The Model Context Protocol (MCP) is a cutting-edge framework designed to standardize interactions between AI models and client applications. MCP serves as a bridge between AI models and the applications that use them, providing a consistent interface regardless of the underlying model implementation.
+
+Key aspects of MCP:
+
+- **Standardized Communication**: MCP establishes a common language for applications to communicate with AI models
+- **Enhanced Context Management**: Allows for efficient passing of contextual information to AI models
+- **Cross-platform Compatibility**: Works across various programming languages including C#, Java, JavaScript, Python, and TypeScript
+- **Seamless Integration**: Enables developers to easily integrate different AI models into their applications
+
+MCP is particularly valuable in AI agent development as it allows agents to interact with various systems and data sources through a unified protocol, making agents more flexible and powerful.
+
 ## Learning Objectives
 - Understand what MCP is and its role in AI agent development
 - Set up and configure an MCP server for GitHub integration
@@ -77,6 +90,8 @@ Key features:
 - Streaming responses with Chainlit
 
 ## Running the Sample
+
+For detailed setup instructions and more information, refer to the [Github MCP Server Example README](./code_samples/github-mcp/README.md).
 
 1. Start the MCP server:
    ```bash
