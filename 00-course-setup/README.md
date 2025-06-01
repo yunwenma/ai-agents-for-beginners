@@ -66,6 +66,8 @@ Then select `Generate new token`.
 
 You will be prompted to enter a name for your token, select the expiration date (Recommended: 30 Days), and select the scopes for your token (Public Repositories).
 
+It's also necessary to edit the permissions of this token: Permissions -> Models -> Allows access to GitHub Models
+
 Copy your new token that you have just created. You will now add this to your `.env` file included in this course. 
 
 
