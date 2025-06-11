@@ -2,14 +2,14 @@
 CO_OP_TRANSLATOR_METADATA:
 {
   "original_hash": "c729f7442eb5afd55b5522e3ad65c822",
-  "translation_date": "2025-06-11T04:40:01+00:00",
+  "translation_date": "2025-06-11T04:53:26+00:00",
   "source_file": "00-course-setup/README.md",
-  "language_code": "zh"
+  "language_code": "ja"
 }
 -->
-在你的 GitHub 账户中。
+GitHubアカウントでログインしてください。
 
-选择 `Fine-grained tokens` option on the left side of your screen.
+`Fine-grained tokens` option on the left side of your screen.
 
 Then select `Generate new token`.
 
@@ -24,13 +24,13 @@ Copy your new token that you have just created. You will now add this to your `.
 
 ### Step 2: Create Your `.env` File
 
-To create your `.env` 文件，在终端中运行以下命令。
+To create your `.env`ファイルで、ターミナルに次のコマンドを実行します。
 
 ```bash
 cp .env.example .env
 ```
 
-这将复制示例文件并创建一个 `.env` in your directory and where you fill in the values for the environment variables.
+これにより、サンプルファイルがコピーされ、`.env` in your directory and where you fill in the values for the environment variables.
 
 With your token copied, open the `.env` file in your favorite text editor and paste your token into the `GITHUB_TOKEN` field.
 
@@ -52,13 +52,13 @@ This can be done by going to the **Overview** page of your project in the Azure 
 
 ### Step 2: Create Your `.env` File
 
-To create your `.env` 文件，在终端中运行以下命令。
+To create your `.env`ファイルが作成されます。ターミナルで次のコマンドを実行してください。
 
 ```bash
 cp .env.example .env
 ```
 
-这将复制示例文件并创建一个 `.env` in your directory and where you fill in the values for the environment variables.
+これにより、サンプルファイルがコピーされ、`.env` in your directory and where you fill in the values for the environment variables.
 
 With your token copied, open the `.env` file in your favorite text editor and paste your token into the `PROJECT_CONNECTION_STRING` field.
 
@@ -113,25 +113,25 @@ If you want to run these samples, you will need to add the following environment
 
 ### Setup keyless authentication
 
-Rather than hardcode your credentials, we'll use a keyless connection with Azure OpenAI. To do so, we'll import `DefaultAzureCredential` and later call the `DefaultAzureCredential` 函数来获取凭证。
+Rather than hardcode your credentials, we'll use a keyless connection with Azure OpenAI. To do so, we'll import `DefaultAzureCredential` and later call the `DefaultAzureCredential`関数を使って認証情報を取得します。
 
 ```python
 from azure.identity import DefaultAzureCredential, InteractiveBrowserCredential
 ```
 
-## 遇到问题了吗？
+## どこかで詰まったら？
 
-如果在运行此设置时遇到任何问题，请加入我们的
+セットアップの実行に問題があれば、ぜひ私たちの
 
-或
+または
 
-。
+に参加してください。
 
-## 下一课
+## 次のレッスン
 
-你现在已经准备好运行本课程的代码了。祝你在 AI 代理的世界中学习愉快！
+これで、このコースのコードを実行する準備が整いました。AIエージェントの世界についてさらに学ぶことを楽しんでください！
 
-[AI 代理及其应用介绍](../01-intro-to-ai-agents/README.md)
+[AIエージェントの紹介とエージェントのユースケース](../01-intro-to-ai-agents/README.md)
 
-**免责声明**：  
-本文件使用 AI 翻译服务 [Co-op Translator](https://github.com/Azure/co-op-translator) 进行翻译。尽管我们力求准确，但请注意自动翻译可能包含错误或不准确之处。原始语言版本的文件应被视为权威来源。对于重要信息，建议采用专业人工翻译。我们不对因使用本翻译而产生的任何误解或曲解承担责任。
+**免責事項**：  
+本書類はAI翻訳サービス「[Co-op Translator](https://github.com/Azure/co-op-translator)」を使用して翻訳されています。正確性を期しておりますが、自動翻訳には誤りや不正確な箇所が含まれる可能性があることをご了承ください。原文はあくまで正式な情報源とみなしてください。重要な情報については、専門の人間による翻訳を推奨します。本翻訳の使用により生じたいかなる誤解や誤訳についても、当方は責任を負いかねます。
