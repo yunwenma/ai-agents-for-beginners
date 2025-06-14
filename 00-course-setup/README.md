@@ -49,6 +49,11 @@ pip install -r requirements.txt
 ```
 We recommend creating a Python virtual environment to avoid any conflicts and issues.
 
+## Setup VSCode
+Make sure that you are using the right version of Python in VSCode.
+
+![image](https://github.com/user-attachments/assets/110e28d8-ad51-4eb9-9021-4a28f8675003)
+
 ## Set Up for Samples using GitHub Models 
 
 ### Step 1: Retrieve Your GitHub Personal Access Token (PAT)
