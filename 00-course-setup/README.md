@@ -52,7 +52,7 @@ We recommend creating a Python virtual environment to avoid any conflicts and is
 ## Setup VSCode
 Make sure that you are using the right version of Python in VSCode.
 
-![image](https://github.com/user-attachments/assets/110e28d8-ad51-4eb9-9021-4a28f8675003)
+![image](https://github.com/user-attachments/assets/a85e776c-2edb-4331-ae5b-6bfdfb98ee0e)
 
 ## Set Up for Samples using GitHub Models 
 
