@@ -1,15 +1,15 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "c729f7442eb5afd55b5522e3ad65c822",
-  "translation_date": "2025-06-11T04:41:49+00:00",
+  "original_hash": "76945069b52a49cd0432ae3e0b0ba22e",
+  "translation_date": "2025-06-17T08:36:53+00:00",
   "source_file": "00-course-setup/README.md",
   "language_code": "de"
 }
 -->
 in deinem GitHub-Konto.
 
-Wähle die `Fine-grained tokens` option on the left side of your screen.
+Wähle die Option `Fine-grained tokens` option on the left side of your screen.
 
 Then select `Generate new token`.
 
@@ -24,7 +24,7 @@ Copy your new token that you have just created. You will now add this to your `.
 
 ### Step 2: Create Your `.env` File
 
-To create your `.env`-Datei aus und führe den folgenden Befehl in deinem Terminal aus.
+To create your `.env` Datei und führe den folgenden Befehl in deinem Terminal aus.
 
 ```bash
 cp .env.example .env
@@ -38,7 +38,7 @@ You should now be able to run the code samples of this course.
 
 ## Set Up for Samples using Azure AI Foundry and Azure AI Agent Service
 
-### Step 1: Retrieve Your Azure Project Connection String
+### Step 1: Retrieve Your Azure Project Endpoint
 
 
 Follow the steps to creating a hub and project in Azure AI Foundry found here: [Hub resources overview](https://learn.microsoft.com/en-us/azure/ai-foundry/concepts/ai-resources)
@@ -48,11 +48,11 @@ Once you have created your project, you will need to retrieve the connection str
 
 This can be done by going to the **Overview** page of your project in the Azure AI Foundry portal.
 
-![Project Connection String](../../../00-course-setup/images/project-connection-string.png)
+![Project Connection String](../../../00-course-setup/images/project-endpoint.png)
 
 ### Step 2: Create Your `.env` File
 
-To create your `.env`-Datei. Führe den folgenden Befehl in deinem Terminal aus.
+To create your `.env` Datei. Führe den folgenden Befehl in deinem Terminal aus.
 
 ```bash
 cp .env.example .env
@@ -60,7 +60,7 @@ cp .env.example .env
 
 Dies kopiert die Beispieldatei und erstellt eine `.env` in your directory and where you fill in the values for the environment variables.
 
-With your token copied, open the `.env` file in your favorite text editor and paste your token into the `PROJECT_CONNECTION_STRING` field.
+With your token copied, open the `.env` file in your favorite text editor and paste your token into the `PROJECT_ENDPOINT` field.
 
 ### Step 3: Sign in to Azure
 
@@ -113,15 +113,15 @@ If you want to run these samples, you will need to add the following environment
 
 ### Setup keyless authentication
 
-Rather than hardcode your credentials, we'll use a keyless connection with Azure OpenAI. To do so, we'll import `DefaultAzureCredential` and later call the `DefaultAzureCredential`-Funktion, um die Anmeldeinformationen zu erhalten.
+Rather than hardcode your credentials, we'll use a keyless connection with Azure OpenAI. To do so, we'll import `DefaultAzureCredential` and later call the `DefaultAzureCredential` Funktion, um die Anmeldeinformationen zu erhalten.
 
 ```python
 from azure.identity import DefaultAzureCredential, InteractiveBrowserCredential
 ```
 
-## Steckst du irgendwo fest?
+## Stecken geblieben?
 
-Wenn du Probleme bei der Einrichtung hast, komm gerne in unser
+Wenn du Probleme bei der Einrichtung hast, komm gerne in unseren
 
 oder
 
@@ -129,9 +129,9 @@ oder
 
 ## Nächste Lektion
 
-Du bist jetzt bereit, den Code für diesen Kurs auszuführen. Viel Spaß beim weiteren Lernen über die Welt der KI-Agenten!
+Du bist jetzt bereit, den Code für diesen Kurs auszuführen. Viel Erfolg und Spaß beim weiteren Entdecken der Welt der KI-Agenten!
 
-[Einführung in KI-Agenten und Anwendungsfälle für Agenten](../01-intro-to-ai-agents/README.md)
+[Einführung in KI-Agenten und Anwendungsfälle von Agenten](../01-intro-to-ai-agents/README.md)
 
 **Haftungsausschluss**:  
-Dieses Dokument wurde mit dem KI-Übersetzungsdienst [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, beachten Sie bitte, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner Ursprungssprache ist als maßgebliche Quelle zu betrachten. Für wichtige Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die aus der Verwendung dieser Übersetzung entstehen.
+Dieses Dokument wurde mit dem KI-Übersetzungsdienst [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, beachten Sie bitte, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner Ursprungssprache ist als maßgebliche Quelle zu betrachten. Für wichtige Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die aus der Nutzung dieser Übersetzung entstehen.

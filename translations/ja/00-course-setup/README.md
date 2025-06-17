@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "c729f7442eb5afd55b5522e3ad65c822",
-  "translation_date": "2025-06-11T04:53:26+00:00",
+  "original_hash": "76945069b52a49cd0432ae3e0b0ba22e",
+  "translation_date": "2025-06-17T08:35:56+00:00",
   "source_file": "00-course-setup/README.md",
   "language_code": "ja"
 }
@@ -24,13 +24,13 @@ Copy your new token that you have just created. You will now add this to your `.
 
 ### Step 2: Create Your `.env` File
 
-To create your `.env`ファイルで、ターミナルに次のコマンドを実行します。
+To create your `.env` ファイルで、以下のコマンドをターミナルで実行します。
 
 ```bash
 cp .env.example .env
 ```
 
-これにより、サンプルファイルがコピーされ、`.env` in your directory and where you fill in the values for the environment variables.
+これにより、サンプルファイルがコピーされて `.env` in your directory and where you fill in the values for the environment variables.
 
 With your token copied, open the `.env` file in your favorite text editor and paste your token into the `GITHUB_TOKEN` field.
 
@@ -38,7 +38,7 @@ You should now be able to run the code samples of this course.
 
 ## Set Up for Samples using Azure AI Foundry and Azure AI Agent Service
 
-### Step 1: Retrieve Your Azure Project Connection String
+### Step 1: Retrieve Your Azure Project Endpoint
 
 
 Follow the steps to creating a hub and project in Azure AI Foundry found here: [Hub resources overview](https://learn.microsoft.com/en-us/azure/ai-foundry/concepts/ai-resources)
@@ -48,19 +48,19 @@ Once you have created your project, you will need to retrieve the connection str
 
 This can be done by going to the **Overview** page of your project in the Azure AI Foundry portal.
 
-![Project Connection String](../../../00-course-setup/images/project-connection-string.png)
+![Project Connection String](../../../00-course-setup/images/project-endpoint.png)
 
 ### Step 2: Create Your `.env` File
 
-To create your `.env`ファイルが作成されます。ターミナルで次のコマンドを実行してください。
+To create your `.env` ファイルが作成されます。ターミナルで以下のコマンドを実行してください。
 
 ```bash
 cp .env.example .env
 ```
 
-これにより、サンプルファイルがコピーされ、`.env` in your directory and where you fill in the values for the environment variables.
+これにより、サンプルファイルがコピーされて `.env` in your directory and where you fill in the values for the environment variables.
 
-With your token copied, open the `.env` file in your favorite text editor and paste your token into the `PROJECT_CONNECTION_STRING` field.
+With your token copied, open the `.env` file in your favorite text editor and paste your token into the `PROJECT_ENDPOINT` field.
 
 ### Step 3: Sign in to Azure
 
@@ -113,7 +113,7 @@ If you want to run these samples, you will need to add the following environment
 
 ### Setup keyless authentication
 
-Rather than hardcode your credentials, we'll use a keyless connection with Azure OpenAI. To do so, we'll import `DefaultAzureCredential` and later call the `DefaultAzureCredential`関数を使って認証情報を取得します。
+Rather than hardcode your credentials, we'll use a keyless connection with Azure OpenAI. To do so, we'll import `DefaultAzureCredential` and later call the `DefaultAzureCredential` 関数を使って認証情報を取得します。
 
 ```python
 from azure.identity import DefaultAzureCredential, InteractiveBrowserCredential
@@ -121,7 +121,7 @@ from azure.identity import DefaultAzureCredential, InteractiveBrowserCredential
 
 ## どこかで詰まったら？
 
-セットアップの実行に問題があれば、ぜひ私たちの
+セットアップの実行で問題があれば、ぜひ私たちの
 
 または
 
@@ -129,9 +129,9 @@ from azure.identity import DefaultAzureCredential, InteractiveBrowserCredential
 
 ## 次のレッスン
 
-これで、このコースのコードを実行する準備が整いました。AIエージェントの世界についてさらに学ぶことを楽しんでください！
+これで、このコースのコードを実行する準備が整いました。AIエージェントの世界をもっと学んで楽しんでください！
 
 [AIエージェントの紹介とエージェントのユースケース](../01-intro-to-ai-agents/README.md)
 
 **免責事項**：  
-本書類はAI翻訳サービス「[Co-op Translator](https://github.com/Azure/co-op-translator)」を使用して翻訳されています。正確性を期しておりますが、自動翻訳には誤りや不正確な箇所が含まれる可能性があることをご了承ください。原文はあくまで正式な情報源とみなしてください。重要な情報については、専門の人間による翻訳を推奨します。本翻訳の使用により生じたいかなる誤解や誤訳についても、当方は責任を負いかねます。
+本書類はAI翻訳サービス「[Co-op Translator](https://github.com/Azure/co-op-translator)」を使用して翻訳されています。正確性の向上に努めておりますが、自動翻訳には誤りや不正確な部分が含まれる可能性があることをご了承ください。原文の言語によるオリジナル文書が権威ある情報源とみなされます。重要な情報については、専門の人間による翻訳を推奨します。本翻訳の利用により生じた誤解や誤訳について、当方は一切の責任を負いかねます。
