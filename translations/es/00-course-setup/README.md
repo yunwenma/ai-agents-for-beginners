@@ -1,63 +1,17 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "c729f7442eb5afd55b5522e3ad65c822",
-  "translation_date": "2025-06-11T04:41:30+00:00",
+  "original_hash": "76945069b52a49cd0432ae3e0b0ba22e",
+  "translation_date": "2025-06-17T08:36:40+00:00",
   "source_file": "00-course-setup/README.md",
   "language_code": "es"
 }
 -->
-ahora deberías tener tu propia versión bifurcada de este curso en el siguiente enlace:
-
-![Forked Repo](../../../00-course-setup/images/forked-repo.png)
-
-## Ejecutando el Código
-
-Este curso ofrece una serie de Jupyter Notebooks que puedes ejecutar para obtener experiencia práctica construyendo Agentes de IA.
-
-Los ejemplos de código usan ya sea:
-
-**Requiere Cuenta de GitHub - Gratis**:
-
-1) Semantic Kernel Agent Framework + GitHub Models Marketplace. Etiquetado como (semantic-kernel.ipynb)
-2) AutoGen Framework + GitHub Models Marketplace. Etiquetado como (autogen.ipynb)
-
-**Requiere Suscripción a Azure**:
-3) Azure AI Foundry + Azure AI Agent Service. Etiquetado como (azureaiagent.ipynb)
-
-Te animamos a probar los tres tipos de ejemplos para ver cuál funciona mejor para ti.
-
-La opción que elijas determinará los pasos de configuración que debes seguir a continuación:
-
-## Requisitos
-
-- Python 3.12+
-- Una Cuenta de GitHub - Para acceso a GitHub Models Marketplace
-- Suscripción a Azure - Para acceso a Azure AI Foundry
-- Cuenta de Azure AI Foundry - Para acceso a Azure AI Agent Service
-
-Hemos incluido un archivo `requirements.txt` en la raíz de este repositorio que contiene todos los paquetes de Python necesarios para ejecutar los ejemplos de código.
-
-Puedes instalarlos ejecutando el siguiente comando en tu terminal en la raíz del repositorio:
-
-```bash
-pip install -r requirements.txt
-```
-Recomendamos crear un entorno virtual de Python para evitar conflictos y problemas.
-
-## Configuración para Ejemplos que usan GitHub Models 
-
-### Paso 1: Obtén tu Token de Acceso Personal (PAT) de GitHub
-
-Actualmente, este curso usa GitHub Models Marketplace para ofrecer acceso gratuito a Modelos de Lenguaje Grande (LLMs) que se usarán para crear Agentes de IA.
-
-Para acceder a este servicio, necesitarás crear un Token de Acceso Personal de GitHub.
-
-Esto se puede hacer ingresando a tu cuenta de GitHub.
+en tu cuenta de GitHub.
 
 Selecciona los `Fine-grained tokens` option on the left side of your screen.
 
-Then select `Generate new token`.
+Then select `Generar nuevo token`.
 
 ![Generate Token](../../../00-course-setup/images/generate-token.png)
 
@@ -70,7 +24,7 @@ Copy your new token that you have just created. You will now add this to your `.
 
 ### Step 2: Create Your `.env` File
 
-To create your `.env` archivo ejecuta el siguiente comando en tu terminal.
+To create your `.env` y ejecuta el siguiente comando en tu terminal.
 
 ```bash
 cp .env.example .env
@@ -84,7 +38,7 @@ You should now be able to run the code samples of this course.
 
 ## Set Up for Samples using Azure AI Foundry and Azure AI Agent Service
 
-### Step 1: Retrieve Your Azure Project Connection String
+### Step 1: Retrieve Your Azure Project Endpoint
 
 
 Follow the steps to creating a hub and project in Azure AI Foundry found here: [Hub resources overview](https://learn.microsoft.com/en-us/azure/ai-foundry/concepts/ai-resources)
@@ -94,11 +48,11 @@ Once you have created your project, you will need to retrieve the connection str
 
 This can be done by going to the **Overview** page of your project in the Azure AI Foundry portal.
 
-![Project Connection String](../../../00-course-setup/images/project-connection-string.png)
+![Project Connection String](../../../00-course-setup/images/project-endpoint.png)
 
 ### Step 2: Create Your `.env` File
 
-To create your `.env` archivo ejecuta el siguiente comando en tu terminal.
+To create your `.env`. Ejecuta el siguiente comando en tu terminal.
 
 ```bash
 cp .env.example .env
@@ -106,7 +60,7 @@ cp .env.example .env
 
 Esto copiará el archivo de ejemplo y creará un archivo `.env` in your directory and where you fill in the values for the environment variables.
 
-With your token copied, open the `.env` file in your favorite text editor and paste your token into the `PROJECT_CONNECTION_STRING` field.
+With your token copied, open the `.env` file in your favorite text editor and paste your token into the `PROJECT_ENDPOINT` field.
 
 ### Step 3: Sign in to Azure
 
@@ -159,15 +113,15 @@ If you want to run these samples, you will need to add the following environment
 
 ### Setup keyless authentication
 
-Rather than hardcode your credentials, we'll use a keyless connection with Azure OpenAI. To do so, we'll import `DefaultAzureCredential` and later call the `DefaultAzureCredential` función para obtener las credenciales.
+Rather than hardcode your credentials, we'll use a keyless connection with Azure OpenAI. To do so, we'll import `DefaultAzureCredential` and later call the `DefaultAzureCredential` para obtener las credenciales.
 
 ```python
 from azure.identity import DefaultAzureCredential, InteractiveBrowserCredential
 ```
 
-## ¿Atascado en algún lugar?
+## ¿Atascado en alguna parte?
 
-Si tienes algún problema ejecutando esta configuración, únete a nuestro
+Si tienes algún problema al ejecutar esta configuración, únete a nuestro
 
 o
 
@@ -179,5 +133,5 @@ Ahora estás listo para ejecutar el código de este curso. ¡Disfruta aprendiend
 
 [Introducción a los Agentes de IA y Casos de Uso](../01-intro-to-ai-agents/README.md)
 
-**Aviso legal**:  
-Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Aunque nos esforzamos por la precisión, tenga en cuenta que las traducciones automáticas pueden contener errores o inexactitudes. El documento original en su idioma nativo debe considerarse la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables por malentendidos o interpretaciones erróneas derivadas del uso de esta traducción.
+**Descargo de responsabilidad**:  
+Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Aunque nos esforzamos por la precisión, tenga en cuenta que las traducciones automáticas pueden contener errores o inexactitudes. El documento original en su idioma nativo debe considerarse la fuente autorizada. Para información crítica, se recomienda la traducción profesional realizada por humanos. No nos responsabilizamos por malentendidos o interpretaciones erróneas derivadas del uso de esta traducción.

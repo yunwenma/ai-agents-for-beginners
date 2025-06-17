@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "c729f7442eb5afd55b5522e3ad65c822",
-  "translation_date": "2025-06-11T04:41:21+00:00",
+  "original_hash": "76945069b52a49cd0432ae3e0b0ba22e",
+  "translation_date": "2025-06-17T08:36:26+00:00",
   "source_file": "00-course-setup/README.md",
   "language_code": "pt"
 }
 -->
-em sua conta do GitHub.
+na sua Conta GitHub.
 
 Selecione os `Fine-grained tokens` option on the left side of your screen.
 
@@ -30,7 +30,7 @@ To create your `.env` e execute o seguinte comando no seu terminal.
 cp .env.example .env
 ```
 
-Isso irá copiar o arquivo de exemplo e criar um arquivo `.env` in your directory and where you fill in the values for the environment variables.
+Isto irá copiar o ficheiro de exemplo e criar um ficheiro `.env` in your directory and where you fill in the values for the environment variables.
 
 With your token copied, open the `.env` file in your favorite text editor and paste your token into the `GITHUB_TOKEN` field.
 
@@ -38,7 +38,7 @@ You should now be able to run the code samples of this course.
 
 ## Set Up for Samples using Azure AI Foundry and Azure AI Agent Service
 
-### Step 1: Retrieve Your Azure Project Connection String
+### Step 1: Retrieve Your Azure Project Endpoint
 
 
 Follow the steps to creating a hub and project in Azure AI Foundry found here: [Hub resources overview](https://learn.microsoft.com/en-us/azure/ai-foundry/concepts/ai-resources)
@@ -48,7 +48,7 @@ Once you have created your project, you will need to retrieve the connection str
 
 This can be done by going to the **Overview** page of your project in the Azure AI Foundry portal.
 
-![Project Connection String](../../../00-course-setup/images/project-connection-string.png)
+![Project Connection String](../../../00-course-setup/images/project-endpoint.png)
 
 ### Step 2: Create Your `.env` File
 
@@ -58,9 +58,9 @@ To create your `.env`. Execute o seguinte comando no seu terminal.
 cp .env.example .env
 ```
 
-Isso irá copiar o arquivo de exemplo e criar um arquivo `.env` in your directory and where you fill in the values for the environment variables.
+Isto irá copiar o ficheiro de exemplo e criar um ficheiro `.env` in your directory and where you fill in the values for the environment variables.
 
-With your token copied, open the `.env` file in your favorite text editor and paste your token into the `PROJECT_CONNECTION_STRING` field.
+With your token copied, open the `.env` file in your favorite text editor and paste your token into the `PROJECT_ENDPOINT` field.
 
 ### Step 3: Sign in to Azure
 
@@ -119,9 +119,9 @@ Rather than hardcode your credentials, we'll use a keyless connection with Azure
 from azure.identity import DefaultAzureCredential, InteractiveBrowserCredential
 ```
 
-## Preso em Algum Lugar?
+## Preso em Algum Lado?
 
-Se tiver algum problema para executar esta configuração, entre em nosso
+Se tiver algum problema a executar esta configuração, junte-se ao nosso
 
 ou
 
@@ -129,9 +129,9 @@ ou
 
 ## Próxima Aula
 
-Agora você está pronto para executar o código deste curso. Aproveite para aprender mais sobre o mundo dos Agentes de IA!
+Está agora pronto para executar o código deste curso. Boas aprendizagens sobre o mundo dos Agentes de IA!
 
 [Introdução aos Agentes de IA e Casos de Uso de Agentes](../01-intro-to-ai-agents/README.md)
 
 **Aviso Legal**:  
-Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automáticas podem conter erros ou imprecisões. O documento original em seu idioma nativo deve ser considerado a fonte autorizada. Para informações críticas, recomenda-se tradução profissional feita por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes do uso desta tradução.
+Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos pela precisão, por favor tenha em atenção que traduções automáticas podem conter erros ou imprecisões. O documento original na sua língua nativa deve ser considerado a fonte autorizada. Para informações críticas, recomenda-se tradução profissional feita por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes da utilização desta tradução.

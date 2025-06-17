@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "c729f7442eb5afd55b5522e3ad65c822",
-  "translation_date": "2025-06-11T04:42:06+00:00",
+  "original_hash": "76945069b52a49cd0432ae3e0b0ba22e",
+  "translation_date": "2025-06-17T08:37:08+00:00",
   "source_file": "00-course-setup/README.md",
   "language_code": "fa"
 }
 -->
-در حساب GitHub خود.
+در حساب کاربری GitHub خود.
 
 گزینه‌ی `Fine-grained tokens` option on the left side of your screen.
 
@@ -24,7 +24,7 @@ Copy your new token that you have just created. You will now add this to your `.
 
 ### Step 2: Create Your `.env` File
 
-To create your `.env` را انتخاب کنید و دستور زیر را در ترمینال خود اجرا کنید.
+To create your `.env` را انتخاب کنید و دستور زیر را در ترمینال خود اجرا نمایید.
 
 ```bash
 cp .env.example .env
@@ -38,7 +38,7 @@ You should now be able to run the code samples of this course.
 
 ## Set Up for Samples using Azure AI Foundry and Azure AI Agent Service
 
-### Step 1: Retrieve Your Azure Project Connection String
+### Step 1: Retrieve Your Azure Project Endpoint
 
 
 Follow the steps to creating a hub and project in Azure AI Foundry found here: [Hub resources overview](https://learn.microsoft.com/en-us/azure/ai-foundry/concepts/ai-resources)
@@ -48,7 +48,7 @@ Once you have created your project, you will need to retrieve the connection str
 
 This can be done by going to the **Overview** page of your project in the Azure AI Foundry portal.
 
-![Project Connection String](../../../00-course-setup/images/project-connection-string.png)
+![Project Connection String](../../../00-course-setup/images/project-endpoint.png)
 
 ### Step 2: Create Your `.env` File
 
@@ -60,7 +60,7 @@ cp .env.example .env
 
 این کار فایل نمونه را کپی کرده و یک فایل `.env` in your directory and where you fill in the values for the environment variables.
 
-With your token copied, open the `.env` file in your favorite text editor and paste your token into the `PROJECT_CONNECTION_STRING` field.
+With your token copied, open the `.env` file in your favorite text editor and paste your token into the `PROJECT_ENDPOINT` field.
 
 ### Step 3: Sign in to Azure
 
@@ -113,7 +113,7 @@ If you want to run these samples, you will need to add the following environment
 
 ### Setup keyless authentication
 
-Rather than hardcode your credentials, we'll use a keyless connection with Azure OpenAI. To do so, we'll import `DefaultAzureCredential` and later call the `DefaultAzureCredential` را برای دریافت اعتبارنامه اجرا کنید.
+Rather than hardcode your credentials, we'll use a keyless connection with Azure OpenAI. To do so, we'll import `DefaultAzureCredential` and later call the `DefaultAzureCredential` ایجاد می‌کند. برای دریافت اعتبارنامه، از تابع `DefaultAzureCredential` استفاده کنید.
 
 ```python
 from azure.identity import DefaultAzureCredential, InteractiveBrowserCredential
@@ -121,17 +121,15 @@ from azure.identity import DefaultAzureCredential, InteractiveBrowserCredential
 
 ## گیر کرده‌اید؟
 
-اگر در اجرای این تنظیمات به مشکلی برخوردید، به کانال ما در
+اگر در اجرای این تنظیمات به مشکلی برخوردید، به انجمن ما مراجعه کنید یا
 
-یا
-
-مراجعه کنید.
+.
 
 ## درس بعدی
 
-اکنون آماده‌اید تا کدهای این دوره را اجرا کنید. یادگیری خوبی درباره دنیای عامل‌های هوش مصنوعی برایتان آرزو می‌کنیم!
+اکنون آماده‌اید تا کدهای این دوره را اجرا کنید. یادگیری خوش بگذرد و دنیای عوامل هوش مصنوعی را بهتر بشناسید!
 
-[مقدمه‌ای بر عامل‌های هوش مصنوعی و موارد استفاده از آن‌ها](../01-intro-to-ai-agents/README.md)
+[مقدمه‌ای بر عوامل هوش مصنوعی و موارد استفاده از عوامل](../01-intro-to-ai-agents/README.md)
 
 **سلب مسئولیت**:  
-این سند با استفاده از سرویس ترجمه ماشینی [Co-op Translator](https://github.com/Azure/co-op-translator) ترجمه شده است. در حالی که ما در تلاش برای دقت هستیم، لطفاً توجه داشته باشید که ترجمه‌های خودکار ممکن است حاوی خطاها یا نواقصی باشند. سند اصلی به زبان بومی خود باید به عنوان منبع معتبر در نظر گرفته شود. برای اطلاعات حیاتی، استفاده از ترجمه حرفه‌ای انسانی توصیه می‌شود. ما مسئول هیچ گونه سوءتفاهم یا تفسیر نادرستی که از استفاده از این ترجمه ناشی شود، نیستیم.
+این سند با استفاده از سرویس ترجمه ماشینی [Co-op Translator](https://github.com/Azure/co-op-translator) ترجمه شده است. در حالی که ما در تلاش برای دقت هستیم، لطفاً توجه داشته باشید که ترجمه‌های خودکار ممکن است حاوی خطا یا نادرستی باشند. سند اصلی به زبان بومی خود باید به عنوان منبع معتبر در نظر گرفته شود. برای اطلاعات حیاتی، ترجمه حرفه‌ای انسانی توصیه می‌شود. ما مسئول هیچ گونه سوء تفاهم یا تفسیر نادرستی که از استفاده این ترجمه ناشی شود، نیستیم.
