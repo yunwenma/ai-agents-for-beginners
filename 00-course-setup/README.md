@@ -35,6 +35,7 @@ Whichever option you choose, it will determine which setup steps you need to fol
 ## Requirements
 
 - Python 3.12+
+  - **NOTE**: If you don't have Python3.12 installed, ensure you install it.  Then create your venv using python3.12 to ensure the correct versions are installed from the requirements.txt file.
 - A GitHub Account - For Access to the GitHub Models Marketplace
 - Azure Subscription - For Access to Azure AI Foundry
 - Azure AI Foundry Account - For Access to the Azure AI Agent Service
@@ -47,6 +48,11 @@ You can install them by running the following command in your terminal at the ro
 pip install -r requirements.txt
 ```
 We recommend creating a Python virtual environment to avoid any conflicts and issues.
+
+## Setup VSCode
+Make sure that you are using the right version of Python in VSCode.
+
+![image](https://github.com/user-attachments/assets/a85e776c-2edb-4331-ae5b-6bfdfb98ee0e)
 
 ## Set Up for Samples using GitHub Models 
 
@@ -87,7 +93,7 @@ You should now be able to run the code samples of this course.
 
 ## Set Up for Samples using Azure AI Foundry and Azure AI Agent Service
 
-### Step 1: Retrieve Your Azure Project Connection String
+### Step 1: Retrieve Your Azure Project Endpoint
 
 
 Follow the steps to creating a hub and project in Azure AI Foundry found here: [Hub resources overview](https://learn.microsoft.com/en-us/azure/ai-foundry/concepts/ai-resources)
@@ -97,7 +103,7 @@ Once you have created your project, you will need to retrieve the connection str
 
 This can be done by going to the **Overview** page of your project in the Azure AI Foundry portal.
 
-![Project Connection String](./images/project-connection-string.png)
+![Project Connection String](./images/project-endpoint.png)
 
 ### Step 2: Create Your `.env` File
 
@@ -109,7 +115,7 @@ cp .env.example .env
 
 This will copy the example file and create a `.env` in your directory and where you fill in the values for the environment variables.
 
-With your token copied, open the `.env` file in your favorite text editor and paste your token into the `PROJECT_CONNECTION_STRING` field.
+With your token copied, open the `.env` file in your favorite text editor and paste your token into the `PROJECT_ENDPOINT` field.
 
 ### Step 3: Sign in to Azure
 

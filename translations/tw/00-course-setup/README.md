@@ -1,81 +1,36 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "49fa13c21a816ffcc7740ab17ba024a9",
-  "translation_date": "2025-05-20T07:22:20+00:00",
+  "original_hash": "76945069b52a49cd0432ae3e0b0ba22e",
+  "translation_date": "2025-06-17T08:35:10+00:00",
   "source_file": "00-course-setup/README.md",
   "language_code": "tw"
 }
 -->
-你現在應該擁有這門課程的分支版本，連結如下：
-
-![Forked Repo](../../../translated_images/forked-repo.eea246a73044cc984a1e462349e36e7336204f00785e3187b7399905feeada07.tw.png)
-
-## 執行程式碼
-
-這門課程提供一系列 Jupyter 筆記本，讓你可以親手操作，體驗建構 AI 代理的過程。
-
-程式碼範例使用以下其中一種：
-
-**需要 GitHub 帳號 - 免費**：
-
-1) Semantic Kernel Agent Framework + GitHub Models Marketplace。標記為 (semantic-kernel.ipynb)
-2) AutoGen Framework + GitHub Models Marketplace。標記為 (autogen.ipynb)
-
-**需要 Azure 訂閱**：
-3) Azure AI Foundry + Azure AI Agent Service。標記為 (azureaiagent.ipynb)
-
-我們鼓勵你嘗試這三種範例，看看哪一種最適合你。
-
-你選擇的方案會決定你接下來需要遵循的設定步驟：
-
-## 需求
-
-- Python 3.12 以上
-- GitHub 帳號 - 用於存取 GitHub Models Marketplace
-- Azure 訂閱 - 用於存取 Azure AI Foundry
-- Azure AI Foundry 帳號 - 用於存取 Azure AI Agent Service
-
-我們在這個資料庫根目錄放了一個 `requirements.txt` 檔案，裡面包含執行程式碼範例所需的所有 Python 套件。
-
-你可以在資料庫根目錄的終端機執行以下指令來安裝：
-
-```bash
-pip install -r requirements.txt
-```
-
-建議你建立 Python 虛擬環境，避免發生衝突或其他問題。
-
-## 使用 GitHub Models 的範例設定
-
-### 步驟 1：取得你的 GitHub Personal Access Token (PAT)
-
-目前這門課程使用 GitHub Models Marketplace，提供免費的巨大語言模型（LLMs）來建立 AI 代理。
-
-要使用此服務，你需要建立一個 GitHub Personal Access Token。
-
-這可以在你的 GitHub 帳號中完成。
+在你的 GitHub 帳戶中。
 
 選擇 `Fine-grained tokens` option on the left side of your screen.
 
 Then select `Generate new token`.
 
-![Generate Token](../../../translated_images/generate-token.361ec40abe59b84ac68d63c23e2b6854d6fad82bd4e41feb98fc0e6f030e8ef7.tw.png)
+![Generate Token](../../../00-course-setup/images/generate-token.png)
 
 You will be prompted to enter a name for your token, select the expiration date (Recommended: 30 Days), and select the scopes for your token (Public Repositories).
+
+It's also necessary to edit the permissions of this token: Permissions -> Models -> Allows access to GitHub Models
 
 Copy your new token that you have just created. You will now add this to your `.env` file included in this course. 
 
 
 ### Step 2: Create Your `.env` File
 
-To create your `.env` 檔案後，在終端機執行以下指令：
+To create your `.env` 檔案，然後在終端機中執行以下指令。
 
 ```bash
 cp .env.example .env
 ```
 
-這會複製範例檔案並建立一個 `.env` in your directory and where you fill in the values for the environment variables.
+這將複製範例檔案並建立一個 `.env` in your directory and where you fill in the values for the environment variables.
 
 With your token copied, open the `.env` file in your favorite text editor and paste your token into the `GITHUB_TOKEN` field.
 
@@ -83,27 +38,29 @@ You should now be able to run the code samples of this course.
 
 ## Set Up for Samples using Azure AI Foundry and Azure AI Agent Service
 
-### Step 1: Retrieve Your Azure Project Connection String
+### Step 1: Retrieve Your Azure Project Endpoint
 
-Follow the steps to creating a project and agent in Azure AI Foundry found here: [Create a project in Azure AI Foundry](https://learn.microsoft.com/en-us/azure/ai-services/agents/quickstart?pivots=ai-foundry-portal?WT.mc_id=academic-105485-koreyst)
+
+Follow the steps to creating a hub and project in Azure AI Foundry found here: [Hub resources overview](https://learn.microsoft.com/en-us/azure/ai-foundry/concepts/ai-resources)
+
 
 Once you have created your project, you will need to retrieve the connection string for your project.
 
 This can be done by going to the **Overview** page of your project in the Azure AI Foundry portal.
 
-![Project Connection String](../../../translated_images/project-connection-string.8a2c7c804a33d53df14011e583d0c3fe0f79d9eb52b72e3c7d7d2f68f828c8aa.tw.png)
+![Project Connection String](../../../00-course-setup/images/project-endpoint.png)
 
 ### Step 2: Create Your `.env` File
 
-To create your `.env` 檔案，在終端機執行以下指令：
+To create your `.env` 檔案，接著在終端機中執行以下指令。
 
 ```bash
 cp .env.example .env
 ```
 
-這會複製範例檔案並建立一個 `.env` in your directory and where you fill in the values for the environment variables.
+這將複製範例檔案並建立一個 `.env` in your directory and where you fill in the values for the environment variables.
 
-With your token copied, open the `.env` file in your favorite text editor and paste your token into the `PROJECT_CONNECTION_STRING` field.
+With your token copied, open the `.env` file in your favorite text editor and paste your token into the `PROJECT_ENDPOINT` field.
 
 ### Step 3: Sign in to Azure
 
@@ -114,7 +71,7 @@ Next, open a terminal and run `az login --use-device-code` to sign in to your Az
 Once you've logged in, select your subscription in the terminal.
 
 
-## Additional Envionment Variables - Azure Search and Azure OpenAI 
+## Additional Environment Variables - Azure Search and Azure OpenAI 
 
 For the Agentic RAG Lesson - Lesson 5 - there are samples that use Azure Search and Azure OpenAI.
 
@@ -156,15 +113,15 @@ If you want to run these samples, you will need to add the following environment
 
 ### Setup keyless authentication
 
-Rather than hardcode your credentials, we'll use a keyless connection with Azure OpenAI. To do so, we'll import `DefaultAzureCredential` and later call the `DefaultAzureCredential` 函式來取得憑證。
+Rather than hardcode your credentials, we'll use a keyless connection with Azure OpenAI. To do so, we'll import `DefaultAzureCredential` and later call the `DefaultAzureCredential` 函數來取得認證。
 
 ```python
 from azure.identity import DefaultAzureCredential, InteractiveBrowserCredential
 ```
 
-## 卡住了嗎？
+## 遇到問題了嗎？
 
-如果在設定過程中遇到任何問題，歡迎加入我們的
+如果在設定過程中有任何問題，歡迎加入我們的
 
 或
 
@@ -172,9 +129,9 @@ from azure.identity import DefaultAzureCredential, InteractiveBrowserCredential
 
 ## 下一課
 
-你現在已經準備好執行這門課程的程式碼了，祝你在 AI 代理的世界裡學習愉快！
+你現在已經準備好執行本課程的程式碼了。祝你在 AI Agent 的世界中學習愉快！
 
-[Introduction to AI Agents and Agent Use Cases](../01-intro-to-ai-agents/README.md)
+[AI Agents 介紹與應用案例](../01-intro-to-ai-agents/README.md)
 
 **免責聲明**：  
-本文件係使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。雖然我們致力於確保準確性，但請注意自動翻譯可能包含錯誤或不精確之處。原始文件之母語版本應視為權威來源。對於重要資訊，建議採用專業人工翻譯。我們不對因使用本翻譯所產生之任何誤解或誤釋負責。
+本文件係使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。雖然我們力求準確，但請注意自動翻譯可能包含錯誤或不準確之處。原始文件之母語版本應視為權威來源。對於重要資訊，建議採用專業人工翻譯。我們不對因使用本翻譯所引起之任何誤解或誤譯負責。
