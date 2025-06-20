@@ -1,0 +1,9 @@
+pymupdf
+sentence-transformers
+chromadb
+openai>=1.0.0
+azure-core
+azure-identity
+python-dateutil
+six
+flask
